@@ -243,6 +243,7 @@ section {
         .content-wrapper {
             .content-column {
                 align-items: center !important;
+                text-align: center;
                 flex-grow: 1 !important;
             }
         }
@@ -261,28 +262,28 @@ section {
     }
    
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: 0.8em;
         margin: 0;
     }
 
     h2 {
-        font-size: 2.2rem;
-        line-height: 1.8rem;
+        font-size: 2.0rem;
+        line-height: 1.6rem;
         margin: 0;
     }
     
     h3 {
-        font-size: 2.8rem !important;
+        font-size: 2.6rem !important;
     }
     
     h4 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         line-height: 2.4rem !important;
     }
     
     h5 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     h6 {
@@ -295,6 +296,14 @@ section {
     
     p {
         font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.6rem;
+
+        a {
+            font-size: 0.6rem;
+        }
     }
 }
 
