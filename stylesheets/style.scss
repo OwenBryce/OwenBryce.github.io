@@ -78,7 +78,7 @@ ul {
 
 .nav {
     a {
-       text-decoration: none;
+        text-decoration: none;
     }
 }
 
@@ -124,9 +124,9 @@ section {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-      }
+    }
 
-      .content-wrapper {
+    .content-wrapper {
         position: relative;
         z-index: 2;
         width: 100%;
@@ -134,7 +134,7 @@ section {
         height: fit-content;
         display: flex;
         flex-wrap: wrap;
-    
+
         .content-column {
             margin: 3rem;
             flex-grow: 1;
@@ -142,11 +142,11 @@ section {
             display: flex;
             flex-direction: column;
         }
-    
+
         .falling-image {
-            position: absolute; 
-            z-index: 1; 
-            width: 100%; 
+            position: absolute;
+            z-index: 1;
+            width: 100%;
             overflow: hidden;
         }
 
@@ -181,7 +181,7 @@ section {
         height: 2px;
         background-color: $color-light-mute;
     }
-    
+
     .banner-small {
         background-color: $color-light-mute;
         color: $color-dark;
@@ -207,6 +207,65 @@ section {
         color: $color-light-mute;
         font-family: Junicode;
         font-weight: 400;
+    }
+}
+
+.video-preview-link {
+    font-size: 2.2rem;
+    font-family: Serif-Light-Italic;
+    margin: 0;
+}
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    &.active {
+        display: flex;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &__content {
+        position: relative;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 2;
+        max-width: 400px;
+        width: 90%;
+    }
+
+    &__video {
+        position: relative;
+        padding-top: 177.78%; // vertical 9:16 (shorts)
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        background: $color-light;
+        border: none;
+        font-size: 20px;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
     }
 }
 
@@ -260,7 +319,7 @@ section {
     .no-margin-bottom {
         margin-bottom: 0 !important;
     }
-   
+
     h1 {
         font-size: 3.5rem;
         line-height: 0.8em;
@@ -272,16 +331,16 @@ section {
         line-height: 1.6rem;
         margin: 0;
     }
-    
+
     h3 {
         font-size: 2.6rem !important;
     }
-    
+
     h4 {
         font-size: 1.2rem;
         line-height: 2.4rem !important;
     }
-    
+
     h5 {
         font-size: 0.8rem;
     }
@@ -293,7 +352,7 @@ section {
     i {
         font-size: 1rem;
     }
-    
+
     p {
         font-size: 1.2rem;
     }

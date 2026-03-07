@@ -228,6 +228,59 @@ section .content-wrapper .sitting-image {
   font-weight: 400;
 }
 
+.video-preview-link {
+  font-size: 2.2rem;
+  font-family: Serif-Light-Italic;
+  margin: 0;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.video-modal.active {
+  display: flex;
+}
+.video-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.video-modal__content {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 2;
+  max-width: 400px;
+  width: 90%;
+}
+.video-modal__video {
+  position: relative;
+  padding-top: 177.78%;
+}
+.video-modal__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-modal__close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #efefef;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
 .small-screen-hide {
   display: inherit;
 }

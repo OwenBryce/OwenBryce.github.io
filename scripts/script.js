@@ -27,3 +27,29 @@ const handleParallax = () => {
 
 // Start animation loop
 handleParallax();
+
+// VIDEO MODAL
+const previewLinks = document.querySelectorAll('.video-preview-link');
+const modal = document.getElementById('videoModal');
+const iframe = document.getElementById('videoFrame');
+const closeBtn = document.querySelector('.video-modal__close');
+const overlay = document.querySelector('.video-modal__overlay');
+
+previewLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const videoId = link.dataset.video;
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    modal.classList.add('active');
+  });
+});
+
+function closeModal() {
+  modal.classList.remove('active');
+  iframe.src = ''; // stop video
+}
+
+closeBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
