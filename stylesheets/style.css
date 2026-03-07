@@ -256,7 +256,7 @@ section .content-wrapper .sitting-image {
   border-radius: 8px;
   z-index: 2;
   max-width: 400px;
-  width: 90%;
+  width: 85%;
 }
 .video-modal__video {
   position: relative;
